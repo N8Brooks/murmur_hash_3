@@ -11,7 +11,7 @@ This function provides the MurmurHash3 value for a string key.
 
 ```ts
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { murmurHash3 } from "./murmur_hash_3.ts";
+import { murmurHash3 } from "https://deno.land/x/murmur_hash_3/murmur_hash_3.ts";
 
 const hash = murmurHash3("deno");
 
@@ -22,7 +22,7 @@ A seed can be provided with the options parameter. The default seed is 0.
 
 ```ts
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { murmurHash3 } from "./murmur_hash_3.ts";
+import { murmurHash3 } from "https://deno.land/x/murmur_hash_3/murmur_hash_3.ts";
 
 const hash = murmurHash3("deno", { seed: 42 });
 
