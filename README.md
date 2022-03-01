@@ -28,3 +28,11 @@ const hash = murmurHash3("deno", { seed: 42 });
 
 assertEquals(hash, 3140446342);
 ```
+
+## Contributing
+
+Feel free to contribute.
+
+## License
+
+[The MurmurHash3 algorithm is in the public domain](https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash3.cpp).
