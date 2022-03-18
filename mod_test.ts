@@ -1,5 +1,5 @@
 import { assertStrictEquals } from "./test_deps.ts";
-import { murmurHash3 } from "./murmur_hash_3.ts";
+import { murmurHash3 } from "./mod.ts";
 
 Deno.test("empty string", () => {
   assertStrictEquals(murmurHash3(""), 0);
@@ -42,16 +42,16 @@ Deno.test("bi gram", () => {
 });
 
 Deno.test("hello world with seed 10", () => {
-  assertStrictEquals(murmurHash3("hello world", { seed: 10 }), 2980371087);
+  assertStrictEquals(murmurHash3("hello world", 10), 2980371087);
 });
 
 Deno.test("deno with non 32 bit seed", () => {
   assertStrictEquals(
-    murmurHash3("deno", { seed: Number.MAX_SAFE_INTEGER }),
+    murmurHash3("deno", Number.MAX_SAFE_INTEGER),
     272237713,
   );
 });
 
 Deno.test("mmh3 with negative seed", () => {
-  assertStrictEquals(murmurHash3("mmh3", { seed: -10 }), 2930311050);
+  assertStrictEquals(murmurHash3("mmh3", -10), 2930311050);
 });
